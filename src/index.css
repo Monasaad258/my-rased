@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-brand-primary: #141b33;
+  --color-brand-link: #3a5afe;
+  --color-brand-bg: #f0f2f5;
+  --color-brand-text: #1a1f36;
+  --color-brand-input: #e9ecef;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-brand-bg)] text-[var(--color-brand-text)];
+    direction: rtl;
+    font-family: 'Cairo', sans-serif; /* استخدمت Cairo كما في ملفك */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* كلاس خاص لصفحات اللوجين فقط */
+  .auth-page-wrapper {
+    @apply min-h-screen flex items-center justify-center p-4;
+  }
+}
